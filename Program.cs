@@ -1,35 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
-namespace ConsoleApp10
+namespace week3
 {
-    class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
         {
-            passname n1 = new passname();
-            n1.name = Console.ReadLine();
-            n1.pass = Console.ReadLine();
-
-            n1.method();
-            Console.ReadKey();
-        }
-    }
-    class passname
-    {
-        public string name = "";
-        public string pass = "";
-
-
-        public void method()
-        {
-            if (name == "admin" && pass == "123")
-                Console.Write("true");
-            else
-                Console.WriteLine("false");
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1());
         }
     }
 }
