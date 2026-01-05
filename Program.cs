@@ -1,4 +1,4 @@
-namespace week9
+namespace week8
 {
     internal static class Program
     {
