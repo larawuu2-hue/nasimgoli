@@ -10,53 +10,26 @@ namespace ConsoleApp10
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("1");
-            person j1 = new person();
-            Console.WriteLine();
-            Console.WriteLine();
+            passname n1 = new passname();
+            n1.name = Console.ReadLine();
+            n1.pass = Console.ReadLine();
 
-            j1.name = Console.ReadLine();
-            j1.high = Console.ReadLine();
-            j1.age = Console.ReadLine();
-            Console.WriteLine();
-            Console.WriteLine();
-
-            Console.WriteLine("2");
-            person j2 = new person();
-            Console.WriteLine();
-            Console.WriteLine();
-
-            j2.name = Console.ReadLine();
-            j2.high = Console.ReadLine();
-            j2.age = Console.ReadLine();
-            Console.WriteLine();
-            Console.WriteLine();
-
-
-            Console.WriteLine("result");
-            Console.WriteLine();
-            Console.WriteLine();
-            j1.introduce();
-            Console.WriteLine();
-            Console.WriteLine();
-            j2.introduce();
+            n1.method();
             Console.ReadKey();
-
         }
-
     }
-    class person
+    class passname
     {
         public string name = "";
-        public string high = "";
-        public string age = "";
+        public string pass = "";
 
-        public void introduce()
+
+        public void method()
         {
-            Console.WriteLine(name);
-            Console.WriteLine(high);
-            Console.WriteLine(age);
+            if (name == "admin" && pass == "123")
+                Console.Write("true");
+            else
+                Console.WriteLine("false");
         }
     }
-
 }
