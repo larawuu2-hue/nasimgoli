@@ -1,4 +1,4 @@
-﻿namespace week8
+﻿namespace week6
 {
     partial class Form1
     {
@@ -28,104 +28,104 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
+            txtsum = new Button();
+            menha = new Button();
+            taghsim = new Button();
+            zarb = new Button();
+            label1 = new Label();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
-            label1 = new Label();
             SuspendLayout();
             // 
-            // button1
+            // txtsum
             // 
-            button1.Location = new Point(322, 168);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 0;
-            button1.Text = "/";
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            txtsum.Location = new Point(468, 143);
+            txtsum.Name = "txtsum";
+            txtsum.Size = new Size(75, 23);
+            txtsum.TabIndex = 0;
+            txtsum.Text = "+";
+            txtsum.UseVisualStyleBackColor = true;
+            txtsum.Click += txtsum_Click;
             // 
-            // button2
+            // menha
             // 
-            button2.Location = new Point(241, 168);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 1;
-            button2.Text = "-";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            menha.Location = new Point(387, 143);
+            menha.Name = "menha";
+            menha.Size = new Size(75, 23);
+            menha.TabIndex = 1;
+            menha.Text = "-";
+            menha.UseVisualStyleBackColor = true;
+            menha.Click += menha_Click;
             // 
-            // button3
+            // taghsim
             // 
-            button3.Location = new Point(160, 168);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 2;
-            button3.Text = "*";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            taghsim.Location = new Point(306, 143);
+            taghsim.Name = "taghsim";
+            taghsim.Size = new Size(75, 23);
+            taghsim.TabIndex = 2;
+            taghsim.Text = "/";
+            taghsim.UseVisualStyleBackColor = true;
+            taghsim.Click += taghsim_Click;
             // 
-            // button4
+            // zarb
             // 
-            button4.Location = new Point(79, 168);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 23);
-            button4.TabIndex = 3;
-            button4.Text = "+";
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(79, 32);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 4;
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(79, 61);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 5;
+            zarb.Location = new Point(225, 143);
+            zarb.Name = "zarb";
+            zarb.Size = new Size(75, 23);
+            zarb.TabIndex = 3;
+            zarb.Text = "*";
+            zarb.UseVisualStyleBackColor = true;
+            zarb.Click += zarb_Click;
             // 
             // label1
             // 
-            label1.BackColor = SystemColors.ButtonShadow;
-            label1.Location = new Point(501, 143);
+            label1.BackColor = SystemColors.AppWorkspace;
+            label1.Location = new Point(314, 263);
             label1.Name = "label1";
-            label1.Size = new Size(135, 76);
-            label1.TabIndex = 7;
+            label1.Size = new Size(157, 43);
+            label1.TabIndex = 4;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(314, 17);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(157, 23);
+            textBox1.TabIndex = 5;
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(314, 55);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(157, 23);
+            textBox2.TabIndex = 6;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(label1);
             Controls.Add(textBox2);
             Controls.Add(textBox1);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(label1);
+            Controls.Add(zarb);
+            Controls.Add(taghsim);
+            Controls.Add(menha);
+            Controls.Add(txtsum);
             Name = "Form1";
             Text = "Form1";
-            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button txtsum;
+        private Button menha;
+        private Button taghsim;
+        private Button zarb;
+        private Label label1;
         private TextBox textBox1;
         private TextBox textBox2;
-        private Label label1;
     }
 }

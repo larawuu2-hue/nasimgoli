@@ -1,72 +1,83 @@
-namespace week8
+using System.Reflection.PortableExecutable;
+
+namespace week6
 {
     public partial class Form1 : Form
     {
+        mashin m1 = new mashin();
+
         public Form1()
         {
             InitializeComponent();
         }
-        class calculator
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            public double A;
-            public double B;
-            public calculator(double a, double b)
+
+        }
+
+        private void txtsum_Click(object sender, EventArgs e)
+        {
+            label1.Text = m1.sum(int.Parse(textBox1.Text), int.Parse(textBox2.Text));
+
+        }
+
+        private void menha_Click(object sender, EventArgs e)
+        {
+            label1.Text = m1.menha(int.Parse(textBox1.Text), int.Parse(textBox2.Text));
+        }
+
+        private void zarb_Click(object sender, EventArgs e)
+        {
+            label1.Text = m1.zarb(int.Parse(textBox1.Text), int.Parse(textBox2.Text));
+
+        }
+
+        private void taghsim_Click(object sender, EventArgs e)
+        {
+            label1.Text = m1.taghsim(int.Parse(textBox1.Text), int.Parse(textBox2.Text));
+
+        }
+        class mashin
+        {
+
+            public int n1;
+            public int n2;
+            public int result;
+            public string r = "";
+
+
+
+            public string sum(int n1, int n2)
             {
-                A = a;
-                B = b;
+                result = n1 + n2;
+                r = result.ToString();
+                return r;
             }
-            public double add()
+            public string menha(int n1, int n2)
             {
-                return A + B;
+                result = n1 - n2;
+                r = result.ToString();
+                return r;
+
+
             }
-            public double sub()
-            { return A - B; }
-            public double mul()
-            { return A * B; }
-            public double div()
-            { return A / B; }
+            public string zarb(int n1, int n2)
+            {
+                result = n1 * n2;
+                r = result.ToString();
+                return r;
 
-        }
-        private void button2_Click(object sender, EventArgs e)
-        {
-            double a = double.Parse(textBox1.Text);
-            double b = double.Parse(textBox2.Text);
-            calculator s = new calculator(a, b);
-            label1.Text = s.sub().ToString();
-        }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
+            }
+            public string taghsim(int n1, int n2)
+            {
+                result = n1 / n2;
+                r = result.ToString();
+                return r;
 
-        }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            double a = double.Parse(textBox1.Text);
-            double b = double.Parse(textBox2.Text);
-            calculator s = new calculator(a, b);
-            label1.Text = s.add().ToString();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            double a = double.Parse(textBox1.Text);
-            double b = double.Parse(textBox2.Text);
-            calculator s = new calculator(a, b);
-            label1.Text = s.mul().ToString();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            double a = double.Parse(textBox1.Text);
-            double b = double.Parse(textBox2.Text);
-            calculator s = new calculator(a, b);
-            label1.Text = s.div().ToString();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
+            }
         }
     }
 }
