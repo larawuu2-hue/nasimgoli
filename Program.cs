@@ -1,17 +1,62 @@
-namespace week6
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp10
 {
-    internal static class Program
+    class Program
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
-        [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
-            // To customize application configuration such as set high DPI settings or default font,
-            // see https://aka.ms/applicationconfiguration.
-            ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Console.WriteLine("1");
+            person j1 = new person();
+            Console.WriteLine();
+            Console.WriteLine();
+
+            j1.name = Console.ReadLine();
+            j1.high = Console.ReadLine();
+            j1.age = Console.ReadLine();
+            Console.WriteLine();
+            Console.WriteLine();
+
+            Console.WriteLine("2");
+            person j2 = new person();
+            Console.WriteLine();
+            Console.WriteLine();
+
+            j2.name = Console.ReadLine();
+            j2.high = Console.ReadLine();
+            j2.age = Console.ReadLine();
+            Console.WriteLine();
+            Console.WriteLine();
+
+
+            Console.WriteLine("result");
+            Console.WriteLine();
+            Console.WriteLine();
+            j1.introduce();
+            Console.WriteLine();
+            Console.WriteLine();
+            j2.introduce();
+            Console.ReadKey();
+
+        }
+
+    }
+    class person
+    {
+        public string name = "";
+        public string high = "";
+        public string age = "";
+
+        public void introduce()
+        {
+            Console.WriteLine(name);
+            Console.WriteLine(high);
+            Console.WriteLine(age);
         }
     }
+
 }
